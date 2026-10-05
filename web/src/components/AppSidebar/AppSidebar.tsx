@@ -12,6 +12,7 @@ import {
   type LucideIcon,
   MapIcon,
   MenuIcon,
+  PackageSearchIcon,
   PaperclipIcon,
   SearchIcon,
   SquarePenIcon,
@@ -258,6 +259,7 @@ const RouteSidebarContent = () => {
   }
   if (kind === "views") return <ViewsSection manageActive />;
   if (kind === "calendar") return <CollectionSidebarContent context="home" showStatistics={false} />;
+  if (kind === "lostfound") return <CollectionSidebarContent context="home" showStatistics={false} />;
   if (kind === "map") return <CollectionSidebarContent context="home" showStatistics={false} scopeFilter={MAP_MEMO_FILTER} />;
   if (kind === "attachments") return <AttachmentsSidebarContent />;
   if (kind === "inbox") return <InboxSidebarContent />;
@@ -271,6 +273,7 @@ const RouteSidebarContent = () => {
 const NAV_DESTINATIONS = [
   { kind: "calendar", labelKey: "common.calendar", pathname: ROUTES.CALENDAR, icon: CalendarDaysIcon, signedInOnly: false },
   { kind: "map", labelKey: "common.map", pathname: ROUTES.MAP, icon: MapIcon, signedInOnly: false },
+  { kind: "lostfound", labelKey: "lostfound.title", pathname: ROUTES.LOSTFOUND, icon: PackageSearchIcon, signedInOnly: false },
   { kind: "attachments", labelKey: "common.attachments", pathname: ROUTES.ATTACHMENTS, icon: PaperclipIcon, signedInOnly: true },
 ] as const;
 

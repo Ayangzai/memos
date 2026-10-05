@@ -9,6 +9,7 @@ export const ROUTES = {
   ARCHIVED: "/archived",
   CALENDAR: "/calendar",
   MAP: "/map",
+  LOSTFOUND: "/lostfound",
   VIEWS: "/views",
   SETTING: "/setting",
   EXPLORE: "/explore",
